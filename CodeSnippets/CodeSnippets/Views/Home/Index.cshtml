@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Code snippets</h1>
+    <p class="lead">Categorise and auto tag code snippets written in HTML, CSS, JavaScript, C#, Python and any other language,,</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Start adding code snippets</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et convallis lectus. Fusce justo libero, accumsan in sapien sed, 
+            blandit egestas justo. Etiam elementum risus at urna lobortis, at venenatis dolor gravida
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Insert", "Home")">Jump &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>My code snippets</h2>
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer non dictum metus. Pellentesque sagittis dolor nisl, eget aliquet velit finibus et. 
+        Praesent nec ex eu arcu vulputate rutrum non sed arcu. </p>
+        <p><a class="btn btn-default" href="@Url.Action("Snippets", "Home")">Jump &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>About</h2>
+        <p>Ipsum dolor sit amet, consectetur adipiscing elit. Morbi et convallis lectus. Fusce justo libero, accumsan in sapien sed,
+            blandit egestas justo. Etiam elementum risus at urna lobortis, at venenatis dolor gravida</p>
+        <p><a class="btn btn-default" href="@Url.Action("About", "Home")">Jump &raquo;</a></p>
+    </div>
+</div>

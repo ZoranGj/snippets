@@ -1,5 +1,5 @@
 ﻿
-namespace CodeSnippets.SnippetProcessing
+namespace CodeProcessor.Common
 {
     public interface ILanguageComparer
     {

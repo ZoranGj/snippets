@@ -117,10 +117,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SnippetProcessing\ILanguageComparer.cs" />
-    <Compile Include="SnippetProcessing\ITokenizer.cs" />
-    <Compile Include="SnippetProcessing\NaiveBayesProcessor.cs" />
-    <Compile Include="SnippetProcessing\SVMProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -159,9 +155,7 @@
     <Content Include="Views\Home\Insert.cshtml" />
     <Content Include="Views\Home\Snippets.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Code\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

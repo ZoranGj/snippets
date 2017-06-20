@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using CodeProcessor.Common;
 
-namespace CodeSnippets.SnippetProcessing
+namespace CodeProcessor.NaiveBayes
 {
-    public class NaiveBayesProcessor : ITokenizer, ILanguageComparer
+    public class NaiveBayesProcessor : ILanguageComparer
     {
         public string[] IgnoreList
         {

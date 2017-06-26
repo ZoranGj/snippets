@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CodeProcessor.Common 
+namespace CodeProcessor.Logic
 {
 	public abstract class CodeProcessor : ITokenizer {
 		protected HashSet<string> Keywords;

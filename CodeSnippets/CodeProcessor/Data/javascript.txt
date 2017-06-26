@@ -1,0 +1,7 @@
+﻿it('${1:description}', function() {
+    ${0:// body...}
+});
+
+setInterval(function() {
+    ${0:// body...}
+}, ${1:delay});

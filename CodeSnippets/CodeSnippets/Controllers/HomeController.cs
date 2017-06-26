@@ -1,22 +1,38 @@
-﻿using System;
-using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace CodeSnippets.Controllers {
-	public class HomeController : Controller {
-		public ActionResult Index() {
+using CodeProcessor.Files;
+using CodeProcessor.Logic;
+
+namespace CodeSnippets.Controllers
+{
+	public class HomeController : Controller
+    {
+        private readonly IFileReader fileReader;
+        private readonly IValidator validator;
+
+        public HomeController(IFileReader _fileReader, IValidator _validator)
+        {
+            fileReader = _fileReader;
+            validator = _validator;
+        }
+
+        public ActionResult Index()
+        {
 			return View();
 		}
 
-		public ActionResult Insert() {
+		public ActionResult Insert()
+        {
 			return View(); 
 		}
 
-		public ActionResult Snippets() {
+		public ActionResult Snippets()
+        {
 			return View();
 		}
 
-		public ActionResult About() {
+		public ActionResult About()
+        {
 			return View(); 
 		}
 	}

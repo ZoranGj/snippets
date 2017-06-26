@@ -1,5 +1,5 @@
 ﻿using System;
-using CodeProcessor.Common;
+using CodeProcessor.Logic;
 
 namespace CodeProcessor.SupportVectorMachine
 {

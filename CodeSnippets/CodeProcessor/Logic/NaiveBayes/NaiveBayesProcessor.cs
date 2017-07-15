@@ -1,34 +1,19 @@
 ﻿using System;
-using CodeProcessor.Logic;
+using CodeProcessor.Models;
 
 namespace CodeProcessor.NaiveBayes
 {
-    public class NaiveBayesProcessor : ILanguageComparer
+    public class NaiveBayesProcessor : CodeProcessor.Logic.CodeProcessor
     {
-        public string[] IgnoreList
+        protected override string ProcessorInfo
         {
             get
             {
-                throw new NotImplementedException();
+                return "Naive bayes processing";
             }
         }
 
-        public string[] Tokenize(string codeSnippetText)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string BestLanguageMatch(string[] codeSnippetTokenized)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int OccurreancesByLanguage(string[] codeSnippetTokenized, string language)
-        {
-            throw new NotImplementedException();
-        }
-
-        public double ProbabilityByLanguage(string[] codeSnippetTokenized, string language)
+        public override ProcessingResult Process(string input)
         {
             throw new NotImplementedException();
         }

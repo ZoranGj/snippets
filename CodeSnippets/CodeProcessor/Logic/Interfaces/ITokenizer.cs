@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CodeProcessor.Logic
+namespace CodeProcessor.Logic.Interfaces
 {
     public interface ITokenizer
     {

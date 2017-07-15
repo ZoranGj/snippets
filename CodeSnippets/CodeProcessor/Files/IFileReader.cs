@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeProcessor.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,8 @@ namespace CodeProcessor.Files
 {
     public interface IFileReader
     {
-        bool FileExists(string fileName);
+        string ReadContent(ProgrammingLanguage language);
 
-        string ReadContent(string fileName);
-
-        HashSet<string> ReadContentSeparated(string fileName, char separator);
+        HashSet<string> ReadContentSeparated(ProgrammingLanguage language, char separator);
     }
 }

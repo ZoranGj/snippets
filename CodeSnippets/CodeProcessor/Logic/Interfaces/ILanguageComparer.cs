@@ -1,5 +1,5 @@
 ﻿
-namespace CodeProcessor.Logic
+namespace CodeProcessor.Logic.Interfaces
 {
     public interface ILanguageComparer
     {

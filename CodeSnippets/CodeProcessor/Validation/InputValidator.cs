@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeProcessor.Validation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,22 +9,11 @@ namespace CodeProcessor.Logic
 {
     public class InputValidator : IValidator
     {
-        public HashSet<string> ErrorMessages
+        public HashSet<string> IsValid(string target)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsValid(string target)
-        {
-            throw new NotImplementedException();
+            var validationMessages = new HashSet<string>();
+            validationMessages.AddMessage(target.IsNotEmpty());
+            return validationMessages;
         }
     }
 }

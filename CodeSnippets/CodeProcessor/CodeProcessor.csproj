@@ -52,6 +52,7 @@
     <Compile Include="Logic\NaiveBayes\NaiveBayesProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Logic\SupportVectorMachine\SVMProcessor.cs" />
+    <Compile Include="Validation\ValidationMethods.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\Attributes\" />

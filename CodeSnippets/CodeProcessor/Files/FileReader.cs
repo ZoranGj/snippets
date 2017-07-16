@@ -19,7 +19,7 @@ namespace CodeProcessor.Files
 
         public string ReadContent(ProgrammingLanguage language)
         {
-            var file = string.Format("{0}/{1}", filePath, GetFileName(language));
+            var file = GetFileName(language);
             if (!File.Exists(file)) throw new FileNotFoundException("Programming language file not exists.");
 
             var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read);
@@ -34,24 +34,43 @@ namespace CodeProcessor.Files
             throw new NotImplementedException();
         }
 
-        //todo: change logic - create custom attribute in enumeration values
-        private string GetFileName(ProgrammingLanguage language)
+        public void UpdateContent(ProgrammingLanguage language, string content)
         {
+            var file = GetFileName(language);
+            if (!File.Exists(file)) throw new FileNotFoundException("Programming language file not exists.");
+
+            var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read);
+            using (var streamWriter = new StreamWriter(file))
+            {
+                streamWriter.WriteLine(content);
+            }
+        }
+
+        public string GetFileName(ProgrammingLanguage language)
+        {
+            string file = null;
             switch (language)
             {
                 case ProgrammingLanguage.CSharp:
-                    return "csharp.txt";
+                    file = "csharp.txt";
+                    break;
                 case ProgrammingLanguage.CSS:
-                    return "css.txt";
+                    file = "css.txt";
+                    break;
                 case ProgrammingLanguage.HTML:
-                    return "html.txt";
+                    file = "html.txt";
+                    break;
                 case ProgrammingLanguage.Java:
-                    return "java.txt";
+                    file = "java.txt";
+                    break;
                 case ProgrammingLanguage.Javascript:
-                    return "javascript.txt";
+                    file = "javascript.txt";
+                    break;
                 default:
                     return null;
             }
+
+            return string.Format("{0}/{1}", filePath, file);
         }
     }
 }

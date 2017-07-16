@@ -12,5 +12,7 @@ namespace CodeProcessor.Files
         string ReadContent(ProgrammingLanguage language);
 
         HashSet<string> ReadContentSeparated(ProgrammingLanguage language, char separator);
+
+        void UpdateContent(ProgrammingLanguage language, string content);
     }
 }
